@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		08A82E9C2EB66A17247F98D01C2C17D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		0C33A0323434F0065D094D1E8A68AFF1 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A95D35BDD4F6FF7A1833E76592EAF5A /* ReplaceMe.swift */; };
 		268DD0545A01A66B947B3D97111FB7DB /* DeepLinker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B64F9D1A89853D9FBC78D7853805F00 /* DeepLinker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		418DD0B72743F8A8B3A185AD153E45D6 /* Pods-DeepLinker_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 929DB950B7D6DEA362D07A2BE928A47E /* Pods-DeepLinker_Tests-dummy.m */; };
 		5FD091709122D55A567C1C1056459A6B /* Pods-DeepLinker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7180469ADC6F87D833FFE95F9EF3F2 /* Pods-DeepLinker_Example-dummy.m */; };
@@ -17,6 +16,8 @@
 		AF2136BAA1D1F5B131470CAB8F8FF543 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		D2EE17C21BF5B09C1A659EB0D8F58CB8 /* Pods-DeepLinker_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F253D4564FADA0BAC33BDBB28DCD0A3C /* Pods-DeepLinker_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE6BA21731B2EC2D5ABDE9E3FAFFC770 /* DeepLinker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F71893B17B4246628094694328556007 /* DeepLinker-dummy.m */; };
+		FAF04E681EDDE19000D0A8F0 /* DeepLinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04E671EDDE19000D0A8F0 /* DeepLinker.swift */; };
+		FAF04E6A1EDDEA3D00D0A8F0 /* SkypeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF04E691EDDEA3D00D0A8F0 /* SkypeExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,36 +33,37 @@
 /* Begin PBXFileReference section */
 		04CE315F493133FCEE937CC35BD86D22 /* Pods-DeepLinker_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeepLinker_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0775C43C235B7DB0E362805595EB14EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		153AF1EE0EAC0892F09D16FDBC3E17C0 /* DeepLinker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DeepLinker.modulemap; sourceTree = "<group>"; };
+		153AF1EE0EAC0892F09D16FDBC3E17C0 /* DeepLinker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = DeepLinker.modulemap; sourceTree = "<group>"; };
 		1BB676449DEDE8AEB1A24CE329695450 /* Pods-DeepLinker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeepLinker_Example.release.xcconfig"; sourceTree = "<group>"; };
 		1F81B714C202F6C0B62CCA8990D8EF4B /* DeepLinker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeepLinker-prefix.pch"; sourceTree = "<group>"; };
 		26FA3B23425466D37FC0B2C710E04F64 /* Pods-DeepLinker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeepLinker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		29DD26CDAE1811864B1CBC85290EFEE3 /* Pods-DeepLinker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DeepLinker_Tests.modulemap"; sourceTree = "<group>"; };
+		29DD26CDAE1811864B1CBC85290EFEE3 /* Pods-DeepLinker_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DeepLinker_Tests.modulemap"; sourceTree = "<group>"; };
 		2A6F90BA2E2C8906A928D265BCDCBCE9 /* Pods-DeepLinker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeepLinker_Example-umbrella.h"; sourceTree = "<group>"; };
 		2CC048DD676073355A92DCA6AF5878C2 /* Pods-DeepLinker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeepLinker_Example-frameworks.sh"; sourceTree = "<group>"; };
-		31FAF46BBD8CAE884F0649425BBDDE76 /* Pods_DeepLinker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeepLinker_Tests.framework; path = "Pods-DeepLinker_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31FAF46BBD8CAE884F0649425BBDDE76 /* Pods_DeepLinker_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepLinker_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47C02E06F56F4288F00A5EFC68C54929 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A95D35BDD4F6FF7A1833E76592EAF5A /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		5C1FABB1EF4F740B0882F29D22E69D56 /* Pods-DeepLinker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeepLinker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6B64F9D1A89853D9FBC78D7853805F00 /* DeepLinker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeepLinker-umbrella.h"; sourceTree = "<group>"; };
-		6CD9BD7C164942160AC7A774967B502D /* Pods_DeepLinker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DeepLinker_Example.framework; path = "Pods-DeepLinker_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CD9BD7C164942160AC7A774967B502D /* Pods_DeepLinker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DeepLinker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7173194847829F02AA771CB6E18348B7 /* Pods-DeepLinker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeepLinker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8383524A5A2A73902F8C9A03DBC8FA9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88572AE0C7DB73A03261C487C3B50D97 /* Pods-DeepLinker_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeepLinker_Tests-resources.sh"; sourceTree = "<group>"; };
 		929DB950B7D6DEA362D07A2BE928A47E /* Pods-DeepLinker_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeepLinker_Tests-dummy.m"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E00AA2CE97E5CC69FBA6BD7A836DF16 /* DeepLinker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DeepLinker.xcconfig; sourceTree = "<group>"; };
 		9F4CA7C6EEA75DD23E55BF3AE9CEA033 /* Pods-DeepLinker_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeepLinker_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		B66B10C2D13EDE674258B30DB1F9D432 /* DeepLinker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DeepLinker.framework; path = DeepLinker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B66B10C2D13EDE674258B30DB1F9D432 /* DeepLinker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DeepLinker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE28492BC117817CD4018EBC8236B908 /* Pods-DeepLinker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeepLinker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C71220C8696897584550D7F20B7F9FF4 /* Pods-DeepLinker_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DeepLinker_Example-resources.sh"; sourceTree = "<group>"; };
 		CB7180469ADC6F87D833FFE95F9EF3F2 /* Pods-DeepLinker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DeepLinker_Example-dummy.m"; sourceTree = "<group>"; };
-		E3C3B9A9D9AF3696E0503F50E632EFAC /* Pods-DeepLinker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DeepLinker_Example.modulemap"; sourceTree = "<group>"; };
+		E3C3B9A9D9AF3696E0503F50E632EFAC /* Pods-DeepLinker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-DeepLinker_Example.modulemap"; sourceTree = "<group>"; };
 		EFB9AA4B73179EDCD6A41C297A802AB7 /* Pods-DeepLinker_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DeepLinker_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		F253D4564FADA0BAC33BDBB28DCD0A3C /* Pods-DeepLinker_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DeepLinker_Tests-umbrella.h"; sourceTree = "<group>"; };
 		F2C2D39B3765EE59CB2A8668745EF49F /* Pods-DeepLinker_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DeepLinker_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F71893B17B4246628094694328556007 /* DeepLinker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DeepLinker-dummy.m"; sourceTree = "<group>"; };
+		FAF04E671EDDE19000D0A8F0 /* DeepLinker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepLinker.swift; sourceTree = "<group>"; };
+		FAF04E691EDDEA3D00D0A8F0 /* SkypeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkypeExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +127,6 @@
 			children = (
 				CA1F4321961A49CCE3F8801B90A7DAF0 /* Classes */,
 			);
-			name = DeepLinker;
 			path = DeepLinker;
 			sourceTree = "<group>";
 		};
@@ -210,9 +211,9 @@
 		CA1F4321961A49CCE3F8801B90A7DAF0 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5A95D35BDD4F6FF7A1833E76592EAF5A /* ReplaceMe.swift */,
+				FAF04E671EDDE19000D0A8F0 /* DeepLinker.swift */,
+				FAF04E691EDDEA3D00D0A8F0 /* SkypeExtension.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -340,7 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE6BA21731B2EC2D5ABDE9E3FAFFC770 /* DeepLinker-dummy.m in Sources */,
-				0C33A0323434F0065D094D1E8A68AFF1 /* ReplaceMe.swift in Sources */,
+				FAF04E6A1EDDEA3D00D0A8F0 /* SkypeExtension.swift in Sources */,
+				FAF04E681EDDE19000D0A8F0 /* DeepLinker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
