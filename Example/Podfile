@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DeepLinker_Example' do
+  pod 'DeepLinker', :path => '../'
+
+  target 'DeepLinker_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
