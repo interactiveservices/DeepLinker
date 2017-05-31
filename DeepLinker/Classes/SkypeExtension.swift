@@ -20,32 +20,34 @@ extension DeepLinker {
         
         public static func performAction(_ type:SkypeActionType, contact: String, openAppStoreIfNeeded: Bool = false) {
             
+            guard let url = URL(string:"skype:\(contact)?\(type.rawValue)") else {
+                print("Invalid contact passed")
+                return
+            }
+            
             if UIApplication.shared.canOpenURL(URL(string:"skype:")!) {
                 
-                UIApplication.shared.openURL(URL(string:"skype:\(contact)?\(type.rawValue)")!)
+                UIApplication.shared.openURL(url)
                 
             } else {
                 
-                if let infoPlist = Bundle.main.infoDictionary,
-                    let schemes = infoPlist["LSApplicationQueriesSchemes"] as? [String],
-                    schemes.contains("skype")
-                {
-                    
-                    if openAppStoreIfNeeded { openAppStorePage() }
-                    
-                } else {
-                 
-                    print("Please put following into your info.plist file:")
-                    print("<key>LSApplicationQueriesSchemes</key>\n<array>\n<string>skype</string>\n</array>")
-                    
+                if InfoPlistFinder.isQuerySchemeExists(for: "skype") {
+                    if openAppStoreIfNeeded {
+                        openAppStorePage()
+                    }
                 }
                 
             }
-            
         }
         
         public static func openAppStorePage() {
-            UIApplication.shared.openURL(URL(string:"http://itunes.com/apps/skype/skype")!)
+            switch UIDevice.current.userInterfaceIdiom {
+            case .pad:
+                UIApplication.shared.openURL(URL(string:"https://itunes.apple.com/us/app/skype-for-ipad/id442012681?mt=8")!)
+            case .phone:
+                UIApplication.shared.openURL(URL(string:"https://itunes.apple.com/us/app/skype-for-iphone/id304878510?mt=8")!)
+            default: break
+            }
         }
         
     }

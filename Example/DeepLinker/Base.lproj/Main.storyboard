@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="U5H-CL-FZW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2gF-jK-tfu">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Skype View Controller-->
+        <!--Contact View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SkypeViewController" customModule="DeepLinker_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ContactViewController" customModule="DeepLinker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -23,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3p0-gB-687">
-                                <rect key="frame" x="16" y="72" width="288" height="144"/>
+                                <rect key="frame" x="16" y="72" width="288" height="182"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-U2-Dw5">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -52,6 +51,13 @@
                                             <action selector="skypeChat:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ead-x4-ah4"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-lw-Exf">
+                                        <rect key="frame" x="108.5" y="152" width="71" height="30"/>
+                                        <state key="normal" title="Phone call"/>
+                                        <connections>
+                                            <action selector="phoneCall:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tFt-jU-rUG"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="2vD-U2-Dw5" firstAttribute="width" secondItem="3p0-gB-687" secondAttribute="width" id="svB-Vf-dji"/>
@@ -60,7 +66,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="3p0-gB-687" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="E57-T3-Ruh"/>
+                            <constraint firstItem="3p0-gB-687" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" symbolic="YES" id="E57-T3-Ruh"/>
                             <constraint firstItem="3p0-gB-687" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UYq-kl-Aiy"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3p0-gB-687" secondAttribute="trailing" id="dpD-md-Kt7"/>
                         </constraints>
@@ -74,12 +80,71 @@
             </objects>
             <point key="canvasLocation" x="1031.25" y="36.971830985915496"/>
         </scene>
-        <!--Item-->
+        <!--Maps View Controller-->
+        <scene sceneID="8Qf-N5-9zZ">
+            <objects>
+                <viewController id="3cT-O6-Xui" customClass="MapsViewController" customModule="DeepLinker_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RBE-y0-T1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="L5v-Dr-cYe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ggv-8z-b6q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gRw-I9-ICt">
+                                <rect key="frame" x="16" y="72" width="288" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPN-kF-Hkb">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
+                                        <state key="normal" title="Open Yandex Maps"/>
+                                        <connections>
+                                            <action selector="openYandexNavi:" destination="3cT-O6-Xui" eventType="touchUpInside" id="W1C-CW-nmn"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4te-jy-iOd">
+                                        <rect key="frame" x="0.0" y="30" width="288" height="30"/>
+                                        <state key="normal" title="Open Yandex Navi"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="gRw-I9-ICt" secondAttribute="trailing" id="Zcx-hV-kk1"/>
+                            <constraint firstItem="gRw-I9-ICt" firstAttribute="leading" secondItem="Ggv-8z-b6q" secondAttribute="leadingMargin" id="row-Zt-MLa"/>
+                            <constraint firstItem="gRw-I9-ICt" firstAttribute="top" secondItem="RBE-y0-T1h" secondAttribute="bottom" constant="8" symbolic="YES" id="yyw-KG-xWb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dqb-qY-0my"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2NV-BW-0Qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1031" y="863"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="zwR-nB-qos">
+            <objects>
+                <tabBarController id="2gF-jK-tfu" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="F69-3s-ev1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JBB-Qh-AIE" kind="relationship" relationship="viewControllers" id="dzm-ub-8Bp"/>
+                        <segue destination="tRL-NG-8H4" kind="relationship" relationship="viewControllers" id="4Xq-hb-78y"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KYi-yd-tNJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-866" y="562"/>
+        </scene>
+        <!--Skype-->
         <scene sceneID="gF5-Vl-chN">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GqB-1S-6Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JBB-Qh-AIE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ouY-fS-QDM"/>
+                    <tabBarItem key="tabBarItem" title="Skype" id="ouY-fS-QDM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bjH-IS-IsE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -90,25 +155,28 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Oha-Rh-xrB"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GqB-1S-6Ss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="193" y="37"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="be8-N8-tNj">
+        <!--Maps-->
+        <scene sceneID="M0Z-O2-MgZ">
             <objects>
-                <tabBarController id="U5H-CL-FZW" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="mnp-kE-Yus">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tRL-NG-8H4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Maps" id="dYS-3p-9Xf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u8J-MT-CJM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="JBB-Qh-AIE" kind="relationship" relationship="viewControllers" id="V18-wb-rIj"/>
+                        <segue destination="3cT-O6-Xui" kind="relationship" relationship="rootViewController" id="3eP-kJ-IRI"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PCf-1Z-Jaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osv-Nu-lM5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="369"/>
+            <point key="canvasLocation" x="191" y="863"/>
         </scene>
     </scenes>
 </document>
