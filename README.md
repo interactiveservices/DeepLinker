@@ -20,22 +20,23 @@ pod "DeepLinker"
 ## Usage
 
 DeepLinker provides convenient API access to integrate with popular apps.
+
 Don't waste your time to googling all these things! Just use `DeepLinker` 😺
 
-### Phone calls
+#### Phone calls
 ```swift
 DeepLinker.Phone.performCall(phoneNumber: "+7-923-233-3243")
 ```
-### Skype calls
+#### Skype calls
 ```swift
 DeepLinker.Skype.performAction(.call, contact: contactTextField.text!)
 ```
-### Maps(yandex, google, apple)
+#### Maps(yandex, google, apple)
 ```swift
 DeepLinker.Maps.YandexMaps.open(latitude: 55.885452,
                                 longitude: 37.670545)
 ```
-### Open links in SafariViewController
+#### Open links in SafariViewController
 ```swift
 DeepLinker.WebLink.presentSafariViewController(for: self, with: SomeUrl)
 ```
