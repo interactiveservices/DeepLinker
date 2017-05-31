@@ -24,6 +24,8 @@
 	<array>
 		<string>skype</string>
 		<string>yandexmaps</string>
+        <string>yandexnavi</string>
+        <string>comgooglemaps</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>

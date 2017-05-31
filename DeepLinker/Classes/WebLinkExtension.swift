@@ -9,15 +9,19 @@
 import UIKit
 import SafariServices
 
-extension UIViewController {
+extension DeepLinker {
     
-    public func presentSafariViewController(with url: URL) {
-        
-        if #available(iOS 9.0, *) {
-            let safariVC = SFSafariViewController(url: url)
-            self.present(safariVC, animated: true)
-        } else {
-            UIApplication.shared.openURL(url)
+    public enum WebLink {
+    
+        public func presentSafariViewController(for viewController: UIViewController, with url: URL) {
+            
+            if #available(iOS 9.0, *) {
+                let safariVC = SFSafariViewController(url: url)
+                viewController.present(safariVC, animated: true)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+            
         }
         
     }

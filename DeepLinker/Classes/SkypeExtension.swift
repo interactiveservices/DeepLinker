@@ -18,7 +18,7 @@ extension DeepLinker {
     
     public enum Skype {
         
-        public static func performAction(_ type:SkypeActionType, contact: String, openAppStoreIfNeeded: Bool = false) {
+        public static func performAction(_ type:SkypeActionType, contact: String) {
             
             guard let url = URL(string:"skype:\(contact)?\(type.rawValue)") else {
                 print("Invalid contact passed")
@@ -32,15 +32,13 @@ extension DeepLinker {
             } else {
                 
                 if InfoPlistFinder.isQuerySchemeExists(for: "skype") {
-                    if openAppStoreIfNeeded {
-                        openAppStorePage()
-                    }
+                    openAppStore()
                 }
                 
             }
         }
         
-        public static func openAppStorePage() {
+        private static func openAppStore() {
             switch UIDevice.current.userInterfaceIdiom {
             case .pad:
                 UIApplication.shared.openURL(URL(string:"https://itunes.apple.com/us/app/skype-for-ipad/id442012681?mt=8")!)

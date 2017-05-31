@@ -19,13 +19,13 @@ class ContactViewController: UIViewController {
     }
     
     @IBAction func skypeCall(_ sender: UIButton) {
-        DeepLinker.Skype.performAction(.call, contact: contactTextField.text!, openAppStoreIfNeeded: true)
+        DeepLinker.Skype.performAction(.call, contact: contactTextField.text!)
     }
     @IBAction func skypeVideo(_ sender: UIButton) {
-        DeepLinker.Skype.performAction(.video, contact: contactTextField.text!, openAppStoreIfNeeded: true)
+        DeepLinker.Skype.performAction(.video, contact: contactTextField.text!)
     }
     @IBAction func skypeChat(_ sender: UIButton) {
-        DeepLinker.Skype.performAction(.chat, contact: contactTextField.text!, openAppStoreIfNeeded: true)
+        DeepLinker.Skype.performAction(.chat, contact: contactTextField.text!)
     }
     
     @IBAction func phoneCall(_ sender: UIButton) {

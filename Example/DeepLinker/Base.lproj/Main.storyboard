@@ -93,18 +93,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gRw-I9-ICt">
-                                <rect key="frame" x="16" y="72" width="288" height="60"/>
+                                <rect key="frame" x="16" y="72" width="288" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VPN-kF-Hkb">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
                                         <state key="normal" title="Open Yandex Maps"/>
                                         <connections>
-                                            <action selector="openYandexNavi:" destination="3cT-O6-Xui" eventType="touchUpInside" id="W1C-CW-nmn"/>
+                                            <action selector="openYandexMaps:" destination="3cT-O6-Xui" eventType="touchUpInside" id="aXJ-R4-xz2"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4te-jy-iOd">
                                         <rect key="frame" x="0.0" y="30" width="288" height="30"/>
                                         <state key="normal" title="Open Yandex Navi"/>
+                                        <connections>
+                                            <action selector="openYandexNavi:" destination="3cT-O6-Xui" eventType="touchUpInside" id="0Se-3a-YHe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="flG-RE-HGf">
+                                        <rect key="frame" x="0.0" y="60" width="288" height="30"/>
+                                        <state key="normal" title="Open Apple Maps"/>
+                                        <connections>
+                                            <action selector="openAppleMaps:" destination="3cT-O6-Xui" eventType="touchUpInside" id="yFW-ko-S4X"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKM-DE-yeB">
+                                        <rect key="frame" x="0.0" y="90" width="288" height="30"/>
+                                        <state key="normal" title="Open Google Maps"/>
+                                        <connections>
+                                            <action selector="openGoogleMaps:" destination="3cT-O6-Xui" eventType="touchUpInside" id="QLR-C4-fF8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
