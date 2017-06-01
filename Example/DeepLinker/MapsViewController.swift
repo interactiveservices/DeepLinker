@@ -16,32 +16,35 @@ class MapsViewController: UIViewController {
 
     }
 
+    var maps = DeepLinker.Maps(latitude: 55.885452, longitude: 37.670545, option: .buildRoute)
+    
     @IBAction func openYandexMaps(_ sender: UIButton) {
         
-        DeepLinker.Maps.YandexMaps.open(latitude: 55.885452,
-                                        longitude: 37.670545)
-        
+        maps.openYandexMaps()
     }
     
     @IBAction func openYandexNavi(_ sender: UIButton) {
         
-        DeepLinker.Maps.YandexNavi.open(latitude: 55.885452,
-                                        longitude: 37.670545)
-        
+        maps.openYandexNavi()
     }
 
     @IBAction func openAppleMaps(_ sender: UIButton) {
         
-        DeepLinker.Maps.AppleMaps.open(latitude: 55.885452,
-                                        longitude: 37.670545,
-                                        description: "Test Тест")
-        
+        maps.openAppleMaps()
     }
     
     @IBAction func openGoogleMaps(_ sender: UIButton) {
         
-        DeepLinker.Maps.GoogleMaps.open(latitude: 55.885452,
-                                        longitude: 37.670545)
+       maps.openGoogleMaps()
+    }
+    
+    @IBAction func buildRouteChanged(_ sender: UISwitch) {
+        
+        if sender.isOn {
+            maps.option = .buildRoute
+        } else {
+            maps.option = .showPoint
+        }
         
     }
     

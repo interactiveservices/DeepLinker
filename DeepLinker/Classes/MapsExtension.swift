@@ -9,11 +9,29 @@
 import Foundation
 import MapKit
 
+public enum MapOption {
+    case showPoint
+    case buildRoute
+}
+
 extension DeepLinker {
     
-    public enum Maps {
+    public struct Maps {
         
-        static func openMaps(appName: String, link: String, storeLink: String) {
+        public var latitude:Double
+        public var longitude:Double
+        public var option:MapOption
+        
+        public init(latitude:Double,
+                    longitude:Double,
+                    option:MapOption = .showPoint) {
+            
+            self.latitude = latitude
+            self.longitude = longitude
+            self.option = option
+        }
+        
+        func openMaps(appName: String, link: String, storeLink: String) {
             
             let url = URL(string: link)!
             
@@ -21,67 +39,82 @@ extension DeepLinker {
                 
                 UIApplication.shared.openURL(url)
                 
-            } else {
+            } else if InfoPlistFinder.isQuerySchemeExists(for: appName) {
                 
-                if InfoPlistFinder.isQuerySchemeExists(for: appName) {
-                    UIApplication.shared.openURL(URL(string: storeLink)!)
-                }
+                UIApplication.shared.openURL(URL(string: storeLink)!)
+                
             }
         }
         
-        public enum YandexMaps {
+        public func openYandexMaps() {
             
-            public static func open(latitude: Double, longitude: Double) {
-                
-                DeepLinker.Maps.openMaps(
-                    appName: "yandexmaps",
-                    link: "yandexmaps://maps.yandex.ru/?pt=\(longitude),\(latitude)",
-                    storeLink: "https://itunes.apple.com/ru/app/yandex.maps/id313877526?mt=8"
-                )
+            var param:String
+            switch option {
+            case .buildRoute:
+                param = "rtext=\(latitude),\(longitude)"
+            case .showPoint:
+                param = "pt=\(longitude),\(latitude)"
             }
+            
+            openMaps(
+                appName: "yandexmaps",
+                link: "yandexmaps://maps.yandex.ru/?\(param)",
+                storeLink: "https://itunes.apple.com/ru/app/yandex.maps/id313877526?mt=8"
+            )
+        }
+        
+        public func openYandexNavi() {
+            
+            var param:String
+            switch option {
+            case .buildRoute:
+                param = "build_route_on_map?lat_to=\(latitude)&lon_to=\(longitude)"
+            case .showPoint:
+                param = "show_point_on_map?lat=\(latitude)&lon=\(longitude)"
+            }
+            
+            openMaps(
+                appName: "yandexnavi",
+                link: "yandexnavi://\(param)",
+                storeLink: "https://itunes.apple.com/ru/app/yandex.navigator/id474500851"
+            )
+        }
+        
+        public func openGoogleMaps() {
+            
+            var param:String
+            switch option {
+            case .buildRoute:
+                param = "daddr"
+            case .showPoint:
+                param = "q"
+            }
+            
+            openMaps(
+                appName: "comgooglemaps",
+                link: "comgooglemaps://?\(param)=\(latitude),\(longitude)",
+                storeLink: "https://itunes.apple.com/us/app/google-maps-navigation-transit/id585027354?mt=8"
+            )
+        }
+        
+        public func openAppleMaps(description: String? = nil) {
+            
+            var param:[String:Any]
+            switch option {
+            case .buildRoute:
+                param = [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
+            case .showPoint:
+                param = [:]
+            }
+            
+            let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
+            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
+            mapItem.name = description
+            mapItem.openInMaps(launchOptions: param)
+            
             
         }
         
-        public enum YandexNavi {
-        
-            public static func open(latitude: Double, longitude: Double) {
-                
-                DeepLinker.Maps.openMaps(
-                    appName: "yandexnavi",
-                    link: "yandexnavi://show_point_on_map?lat=\(latitude)&lon=\(longitude)",
-                    storeLink: "https://itunes.apple.com/ru/app/yandex.navigator/id474500851"
-                )
-            }
-            
-        }
-        
-        public enum GoogleMaps {
-            
-            public static func open(latitude: Double, longitude: Double) {
-                
-                DeepLinker.Maps.openMaps(
-                    appName: "comgooglemaps",
-                    link: "comgooglemaps://?center=\(latitude),\(longitude)",
-                    storeLink: "https://itunes.apple.com/us/app/google-maps-navigation-transit/id585027354?mt=8"
-                )
-            }
-            
-        }
-        
-        public enum AppleMaps {
-            
-            public static func open(latitude: Double, longitude: Double, description: String?) {
-                
-                let coordinate = CLLocationCoordinate2DMake(latitude, longitude)
-                let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: coordinate, addressDictionary:nil))
-                mapItem.name = description
-                mapItem.openInMaps(launchOptions: [:])
-                    //[MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving]
-                
-            }
-            
-        }
-                    
     }
     
 }

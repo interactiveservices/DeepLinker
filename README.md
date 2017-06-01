@@ -21,7 +21,7 @@ pod "DeepLinker"
 
 DeepLinker provides convenient API access to integrate with popular apps.
 
-Don't waste your time to googling all these things! Just use `DeepLinker` 😺
+Don't waste your time to googling all these things up! Just use `DeepLinker` 😺
 
 #### Phone calls
 ```swift
@@ -32,9 +32,13 @@ DeepLinker.Phone.performCall(phoneNumber: "+7-923-233-3243")
 DeepLinker.Skype.performAction(.call, contact: contactTextField.text!)
 ```
 #### Maps(yandex, google, apple)
+
+One API to rule them all 💍
+
 ```swift
-DeepLinker.Maps.YandexMaps.open(latitude: 55.885452,
-                                longitude: 37.670545)
+DeepLinker.Maps(latitude: 55.885452, longitude: 37.670545, option: .showPoint).openAppleMaps()
+//
+DeepLinker.Maps(latitude: 55.885452, longitude: 37.670545, option: .buildRoute).openYandexNavi()
 ```
 #### Open links in SafariViewController
 ```swift
