@@ -13,6 +13,7 @@
 		5FD091709122D55A567C1C1056459A6B /* Pods-DeepLinker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7180469ADC6F87D833FFE95F9EF3F2 /* Pods-DeepLinker_Example-dummy.m */; };
 		710A8D381EDEA72000B13324 /* InfoPlistFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A8D371EDEA72000B13324 /* InfoPlistFinder.swift */; };
 		710A8D3A1EDEA9CC00B13324 /* PhoneExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710A8D391EDEA9CC00B13324 /* PhoneExtension.swift */; };
+		71A049381EE5A9F900EF6F0D /* SettingsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A049371EE5A9F900EF6F0D /* SettingsExtension.swift */; };
 		71C15DCA1EDEBF59000BF75B /* WebLinkExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C15DC91EDEBF59000BF75B /* WebLinkExtension.swift */; };
 		71C15DCC1EDEC236000BF75B /* MapsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C15DCB1EDEC236000BF75B /* MapsExtension.swift */; };
 		90FD31D635E7FEA440C6213FBA15AE1B /* Pods-DeepLinker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A6F90BA2E2C8906A928D265BCDCBCE9 /* Pods-DeepLinker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -53,6 +54,7 @@
 		710A8D371EDEA72000B13324 /* InfoPlistFinder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPlistFinder.swift; sourceTree = "<group>"; };
 		710A8D391EDEA9CC00B13324 /* PhoneExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneExtension.swift; sourceTree = "<group>"; };
 		7173194847829F02AA771CB6E18348B7 /* Pods-DeepLinker_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DeepLinker_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		71A049371EE5A9F900EF6F0D /* SettingsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsExtension.swift; sourceTree = "<group>"; };
 		71C15DC91EDEBF59000BF75B /* WebLinkExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebLinkExtension.swift; sourceTree = "<group>"; };
 		71C15DCB1EDEC236000BF75B /* MapsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsExtension.swift; sourceTree = "<group>"; };
 		8383524A5A2A73902F8C9A03DBC8FA9E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				71C15DC91EDEBF59000BF75B /* WebLinkExtension.swift */,
 				71C15DCB1EDEC236000BF75B /* MapsExtension.swift */,
 				710A8D371EDEA72000B13324 /* InfoPlistFinder.swift */,
+				71A049371EE5A9F900EF6F0D /* SettingsExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71A049381EE5A9F900EF6F0D /* SettingsExtension.swift in Sources */,
 				710A8D381EDEA72000B13324 /* InfoPlistFinder.swift in Sources */,
 				DE6BA21731B2EC2D5ABDE9E3FAFFC770 /* DeepLinker-dummy.m in Sources */,
 				71C15DCC1EDEC236000BF75B /* MapsExtension.swift in Sources */,

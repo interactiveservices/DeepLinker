@@ -31,6 +31,10 @@ class ContactViewController: UIViewController {
     @IBAction func phoneCall(_ sender: UIButton) {
         DeepLinker.Phone.performCall(phoneNumber: contactTextField.text!)
     }
+    
+    @IBAction func openSettings(_ sender: UIButton) {
+        DeepLinker.Settings.open()
+    }
 
 }
 

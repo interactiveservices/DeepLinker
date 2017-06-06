@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3p0-gB-687">
-                                <rect key="frame" x="16" y="72" width="288" height="182"/>
+                                <rect key="frame" x="16" y="72" width="288" height="220"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contact" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2vD-U2-Dw5">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -56,6 +56,13 @@
                                         <state key="normal" title="Phone call"/>
                                         <connections>
                                             <action selector="phoneCall:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tFt-jU-rUG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLD-cn-UII">
+                                        <rect key="frame" x="96" y="190" width="96" height="30"/>
+                                        <state key="normal" title="Open settings"/>
+                                        <connections>
+                                            <action selector="openSettings:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aHZ-6c-lCY"/>
                                         </connections>
                                     </button>
                                 </subviews>

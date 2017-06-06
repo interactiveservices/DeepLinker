@@ -27,6 +27,10 @@ Don't waste your time to googling all these things up! Just use `DeepLinker` ðŸ˜
 ```swift
 DeepLinker.Phone.performCall(phoneNumber: "+7-923-233-3243")
 ```
+#### Open settings for the app
+```swift
+DeepLinker.Settings.open()
+```
 #### Skype calls
 ```swift
 DeepLinker.Skype.performAction(.call, contact: contactTextField.text!)
