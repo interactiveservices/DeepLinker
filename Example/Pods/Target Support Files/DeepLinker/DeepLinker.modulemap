@@ -1,6 +1,0 @@
-framework module DeepLinker {
-  umbrella header "DeepLinker-umbrella.h"
-
-  export *
-  module * { export * }
-}
